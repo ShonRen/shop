@@ -1,0 +1,141 @@
+    html{
+        background-image: url(../img/regist_bg.jpg);
+    }
+
+#myInfor{
+				position: absolute;
+				margin-top: 202px;
+				margin-left: 22px;
+				border:solid 1px ;
+				width: 280px;
+				height: 532px;
+				font-family: "微软雅黑";
+				font-size: 20px;
+				background: #5BC2F9;
+			}
+			#myInfor .div{
+				text-align: center;
+                height: 45px;
+				line-height:46px;
+				margin-bottom: 12px;
+				cursor: pointer;
+				background: rgb(42, 134, 196);
+				font-weight: bold;
+				color: rgb(244, 249, 252);
+				font-family: "Microsoft YaHei";
+				
+			}
+			#myInfor .d_top{
+				text-align: center;
+				border-bottom: solid 3px black;
+				margin-top: 20px;
+			}
+			#myInfor .div a{
+				text-decoration: none;
+				
+			}
+			#myInfor .d-bottom img{
+			padding-left: 4px;
+			}
+			
+			/*详细信息*/
+				#myInfor{
+				position: absolute;
+				margin-top: 80px;
+				margin-left: 22px;
+				border:solid 1px ;
+				width: 280px;
+				height: 402px;
+				font-family: "微软雅黑";
+				font-size: 20px;
+				background: rgb(229,219,204);
+			}
+			#myInfor .div{
+				text-align: center;
+                height: 45px;
+				line-height:46px;
+				margin-bottom: 12px;
+				cursor: pointer;
+				background: rgb(222, 214, 190);
+				font-weight: bold;
+				color: rgb(244, 249, 252);
+				font-family: "Microsoft YaHei";
+				
+			}
+			#myInfor .d_top{
+				text-align: center;
+				border-bottom: solid 3px black;
+				margin-top: 20px;
+				position: relative;
+			}
+			#myInfor .div a{
+				text-decoration: red;
+				
+			}
+			#myInfor .d-bottom img{
+			padding-left: 4px;
+			}
+			#myInfor1{
+				float: left;
+				position:relative;
+				margin-top: 277px;
+				margin-left: 499px;
+				font-size: 20px;
+				font-weight: bold;
+			}
+			#myInfor1 ul li{
+				line-height: 40px;
+			}
+			#myInfor1 ul li span{
+				border-bottom: solid 2px red;
+			}
+			
+			  /*	<!--我的比赛-->*/
+			#myInfor2{
+				float: left;
+				position:absolute;
+				margin-top: 350px;
+				margin-left: 499px;
+				font-size: 20px;
+				font-weight: bold;
+			}
+			#myInfor2 ul li{
+				line-height: 40px;
+			}
+			#myInfor2 ul li span{
+				border-bottom: solid 2px red;
+			}
+			/*我的比赛*/
+			#myInfor3{
+				float: left;
+				position:absolute;
+				margin-top: 350px;
+				margin-left: 499px;
+				font-size:16px;
+				font-weight: bold;
+			}
+			#myInfor3 ol{
+			   list-style: none;
+			   line-height: 48px;
+			}
+			#again1{
+				width: 180px;
+				height: 20px ;
+				border-radius:10px 10px 10px 10px ;
+				background: #B9C0D2;
+			}
+			#again2{
+				width: 180px;
+				height: 20px ;
+				border-radius:10px 10px 10px 10px ;
+				background: #B9C0D2;
+			}
+			#myInfor3 .sub{
+				width:281px;
+				height:35px;
+				border-radius:20px 20px 20px 20px;				
+				background:#048f74;
+				color:#f8f8f8;
+				cursor: pointer;
+			
+			}

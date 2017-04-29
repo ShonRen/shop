@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>会员登录</title>
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+</head>
+
+<script type="text/javascript">
+$(function(){
+
+		 	var username = "lml";
+			var password = "123456";
+		 	// alert(username);
+		 
+			 //发送ajax请求
+			 //  alert("---------------");
+			  $.ajax({
+			      url:"http://localhost:8080/store_0/user/login.do",
+			      type:"post",
+			      data:{"username":username,"password":password},
+			      dataType:"json",	  
+			      success:function(result){
+			    	  alert(result.data.shop_user_email);
+				    if(result.status==0){
+					   //将用户信息写入cookie
+					   alert("登录成功，正在跳转.....");
+					  var userId = result.data.shop_user_id;
+					   addCookie("userId",userId,2);
+					   window.location.href="logined.html";
+				    }else if(result.status==1){//用户名错误
+				       $("#user_span").html(result.msg);
+					   alert("无该用户，请注册");
+				       window.location.href="register.html";
+				    }else if(result.status==2){//密码错误
+					   $("#password_span").html(result.msg);
+				   }
+				   
+			   },
+			   error:function(){
+				   alert("登录失败");
+			   }
+				   
+			   });
+
+});
+</script>
+
+
+<body>
+
+</body>
+</html>

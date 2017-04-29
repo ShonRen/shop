@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>首页</title>
+		<!--设置移动端-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--导入css-->
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<!--导入jquery.js-->
+		<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+		<!--导入bootstrap.js-->
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script>
+			$(function() {
+				$('.carousel').carousel({
+					interval: 3000
+				});
+			})
+			
+			//点击图片 查看详情
+			$(function(){
+				 $(".col-xs-12 p").on("click","a",function(){
+					 alert("已选中");
+					 window.location.href="product_info.html";
+				  });
+				 
+				
+			})
+		</script>
+	</head>
+
+	<body>
+		<div class="container">
+			<!--放log-->
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 col-sm-6 col-xs-12"><img src="img/logo2.gif" /></div>
+					<div class="col-md-4 col-sm-6 col-xs-12"><img src="img/header.jpg" /></div>
+					<div style="margin-top: 20px;padding-left:240px" class="col-md-4 col-sm-6 col-xs-12">
+						<span><a href="register.html">注册</a></span>
+						<span><a href="login.html">登录</a></span>
+					</div>
+				</div>
+			</div>
+			<!--放导航条-->
+			<div class="container">
+				<div class="row">
+					<nav class="navbar navbar-inverse">
+						<div class="container-fluid">
+							<!-- Brand and toggle get grouped for better mobile display -->
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						  </button>
+								<a class="navbar-brand" href="#">首页</a>
+							</div>
+
+							<!-- Collect the nav links, forms, and other content for toggling -->
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+								<ul class="nav navbar-nav">
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">家用电器<span class="caret"></span></a>
+										<ul class="dropdown-menu">
+											<li>
+												<a href="product_list.html">热水器</a>
+											</li>
+											<li>
+												<a href="product_list.html">洗衣机</a>
+											</li>
+										</ul>
+										</li>
+										<li class="dropdown">
+											<a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">电子产品<span class="caret"></span></a>
+											<ul class="dropdown-menu">
+												<li>
+													<a href="product_list.html">手机</a>
+												</li>
+												<li>
+													<a href="product_list.html">电视</a>
+												</li>
+												<li>
+													<a href="product_list.html">电脑</a>
+												</li>
+											</ul>
+										</li>
+										<li class="dropdown">
+											<a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">服装<span class="caret"></span></a>
+											<ul class="dropdown-menu">
+												<li>
+													<a href="product_list.html">上衣</a>
+												</li>
+												<li>
+													<a href="product_list.html">裤子</a>
+												</li>
+												<li>
+													<a href="product_list.html">鞋</a>
+												</li>
+											</ul>
+										</li>
+										<li class="dropdown">
+											<a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">日常用品<span class="caret"></span></a>
+											<ul class="d																																																																																																																																																																																																																																																																																																																																																																																																																																																										ropdown-menu">
+												<li>
+													<a href="product_list.html">水杯</a>
+												</li>
+												<li>
+													<a href="product_list.html">牙膏</a>
+												</li>
+											</ul>
+								</ul>
+								<form class="navbar-form navbar-right">
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="请输入搜索内容">
+									</div>
+									<button type="submit" class="btn btn-default">搜索</button>
+								</form>
+							</div>
+							<!-- /.navbar-collapse -->
+						</div>
+						<!-- /.container-fluid -->
+					</nav>
+				</div>
+			</div>
+			<!--轮播图-->
+			<div class="container">
+				<div class="row">
+					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+						<!-- Indicators -->
+						<ol class="carousel-indicators">
+							<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+						</ol>
+
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner" role="listbox">
+							<div class="item active">
+								<img src="img/1.jpg" alt="...">
+							</div>
+							<div class="item">
+								<img src="img/2.jpg" alt="...">
+							</div>
+							<div class="item">
+								<img src="img/3.jpg" alt="...">
+							</div>
+						</div>
+
+						<!-- Controls -->
+						<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!--热门商品-->
+			<div class="container">
+				  <div class="row" style="margin-top: 10px">
+					<div class="row">
+						<span style="margin-left: 13px;margin-right: 10px" class="h2">热门商品</span>
+						<img src="img/title2.jpg" />
+					</div>
+					<div class="row">
+						<!--左边-->
+						<div class="col-md-2 hidden-sm hidden-xs" height="400px">
+							<img src="img/big01.jpg" />
+						</div>
+						<!--右边-->
+						<div class="col-md-10 col-sm-12 col-xs-12">
+							<div class="col-md-6 col-sm-12 hidden-xs" height="200px">
+								<img src="img/middle01.jpg" />
+							</div>
+							<div align="center" class="col-md-2 col-sm-4 col-xs-12" style="margin-top: 50px" height="200px">
+								<img src="img/small08.jpg" style="display: inline-block;" />
+								<p>
+									<a href="javascript:;">电饭煲</a>
+								</p>
+								<p>&yen;300</p>
+							</div>
+							<div align="center" class="col-md-2 col-sm-4 col-xs-12" style="margin-top: 50px" height="200px">
+								<img src="img/small02.jpg"display: inline-block;" />
+								<p>
+									<a href="javascript:;">三星电视</a>
+								</p>
+								<p>&yen;5000</p>
+							</div>
+							<div align="center" class="col-md-2 col-sm-4  col-xs-12" style="margin-top: 50px" height="200px">
+								<img src="products/small04.jpg" style="display: inline-block;" />
+								<p>
+									<a href="javascript:;">面包机</a>
+								</p>
+								<p>&yen;8000</p>
+							</div>
+							<div align="center" class="col-md-2 col-sm-4 col-xs-12" style="margin-top: 50px" height="200px">
+								<img src="products/small05.jpg" style="display: inline-block;" />
+								<p>
+									<a href="javascript:;">榨汁机</a>
+								</p>
+								<p>&yen;300</p>
+							</div>
+							<div align="center" class="col-md-2 col-sm-4 col-xs-12" style="margin-top: 50px" height="200px">
+								<img src="products/small03.jpg" style="display: inline-block;" />
+								<p>
+									<a href="javascript:;">炒菜锅</a>
+								</p>
+								<p>&yen;900</p>
+							</div>
+							<div align="center" class="col-md-2 col-sm-4 col-xs-12" style="margin-top: 50px" height="200px">
+								<img src="products/small06.jpg" style="display: inline-block;" />
+								<p>
+									<a href="javascript:;">全自动洗衣机</a>
+								</p>
+								<p>&yen;3000</p>
+							</div>
+							<div align="center" class="col-md-2 col-sm-4 col-xs-12" style="margin-top: 50px" height="200px">
+								<img src="products/small07.jpg" style="display: inline-block;" />
+								<p>
+									<a href="javascript:;">吸尘器</a>
+								</p>
+								<p>&yen;200</p>
+							</div>
+							<div align="center" class="col-md-2 col-sm-4 col-xs-12" style="margin-top: 50px" height="200px">
+								<img src="products/small09.jpg" style="display: inline-block;" />
+								<p>
+									<a href="javascript:;">微波炉</a>
+								</p>
+								<p>&yen;600</p>
+							</div>
+							<div align="center" class="col-md-2 col-sm-4 col-xs-12" style="margin-top: 50px" height="200px">
+								<img src="products/apic10988_s.jpg" style="display: inline-block;" />
+								<p>
+									<a href="javascript:;" style="margin-left: 50px">打蛋机</a>
+								</p>
+								<p style="margin-left: 50px">&yen;300</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--广告-->
+			<div class="container">
+				<div class="row" style="margin-top: 5px;">
+					<img src="products/ad.jpg" width="100%" />
+				</div>
+			</div>
+			<!--最新上架-->
+			<div class="container">
+				<div class="row">
+					<div class="row">
+						<span style="margin-left: 13px;margin-right: 10px" class="h2">最新商品</span>
+						<img src="img/title2.jpg" />
+					</div>
+					<div class="row">
+						<!--左边-->
+						<div class="col-md-3 hidden-sm hidden-xs" style="height: 400px">
+							<img src="products/1.gif" />
+						</div>
+						<!--右边-->
+						<div class="col-md-9 col-sm-12 col-xs-12" style="height: 400px">
+							<div class="row">
+								<div class="col-md-6 col-sm-12 hidden-xs" style="height:200px">
+									<img src="products/2.jpg" />
+								</div>
+								<div align="center" class="col-md-3 col-sm-4 col-xs-12" style="height: 									200px;">
+									<img src="products/dn1.jpg" style="display: inline-block;padding-top: 20px" />
+									<p>
+										<a href="javascript:;">惠普电视</a>
+									</p>
+									<p>&yen;8000</p>
+								</div>
+
+								<div align="center" class="col-md-3 col-sm-4 col-xs-12" style="height: 200px;padding-top: 20px">
+									<img src="products/dn2.gif" style="display: inline-block;" />
+									<p>
+										<a href="javascript:;">未来人类</a>
+									</p>
+									<p>&yen;300000</p>
+								</div>
+								<div align="center" class="col-md-2 col-sm-4  col-xs-12" style="height:200px;padding-top: 20px;">
+									<img src="products/c_0006.jpg" style="display: inline-block;">
+									<p>
+										<a href="javascript:;">魅族手机</a>
+									</p>
+									<p>&yen;2500</p>
+								</div>
+
+								<div align="center" class="col-md-2 col-sm-4 col-xs-12" style="height:200px;padding-top: 20px;">
+									<img src="products/c_0007.jpg" style="display: inline-block;" />
+									<p>
+										<a href="javascript:;">三星手机</a>
+									</p>
+									<p>&yen;3000</p>
+								</div>
+								<div align="center" class="col-md-2 col-sm-4 col-xs-12" style="height: 200px;padding-top: 20px;">
+									<img src="products/c_0003.gif" style="display: inline-block;" />
+									<p>
+										<a href="javascript:;">华为荣耀</a>
+									</p>
+									<p>&yen;2199</p>
+								</div>
+								<div align="center" class="col-md-2 col-sm-4 col-xs-12" style="height: 200px;padding-top: 20px;">
+									<img src="products/c_0004.gif" style="display: inline-block;" />
+									<p>
+										<a href="javascript:;">VIBE手机</a>
+									</p>
+									<p>&yen;999</p>
+								</div>
+								<div align="center" class="col-md-2 col-sm-4 col-xs-12" style="height: 200px;padding-top: 20px;">
+									<img src="products/c_0005.jpg" style="display: inline-block;" />
+									<p>
+										<a href="javascript:;">摩托罗拉手机</a>
+									</p>
+									<p>&yen;1200</p>
+								</div>
+								<div align="center" class="col-md-2 col-sm-4 col-xs-12" style="height: 200px;padding-top: 20px;">
+									<img src="products/c_0001.gif" style="display: inline-block;" />
+									<p>
+										<a href="javascript:;">小米4C</a>
+									</p>
+									<p>&yen;900</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--广告-->
+			<div class="container">
+				<div class="row" style="margin-top: 20px;">
+					<img src="products/ad_.gif" width="100%" />
+				</div>
+			</div>
+			<!--结尾-->
+			<div class="container">
+				<div style="margin-top: 50px;" class="row">
+					<img src="img/footer.jpg" width="100%" />
+				</div>
+			</div>
+
+			<div class="container">
+				<div style="text-align: center;margin-top: 5px;">
+					<ul class="list-inline">
+						<li>
+							<a href="info.html">后台管理</a>
+						</li>
+						<li>
+							<a href="#">联系我们</a>
+						</li>
+						<li>
+							<a href="#">招贤纳士</a>
+						</li>
+						<li>
+							<a href="#">法律声明</a>
+						</li>
+						<li>
+							<a href="#">友情链接</a>
+						</li>
+						<li>
+							<a href="#">支付方式</a>
+						</li>
+						<li>
+							<a href="#">配送方式</a>
+						</li>
+						<li>
+							<a href="#">服务声明</a>
+						</li>
+						<li>
+							<a href="#">广告声明</a>
+						</li>
+						<p>
+							<li class="last">
+								<i class="i-nav-phone"></i> 服务热线：18829897060
+							</li>
+						</p>
+					</ul>
+				</div>
+			</div>
+			<div class="container">
+				<div style="text-align: center;margin-top: 5px;margin-bottom:20px;">
+					Copyright &copy; 2016-2017 梦龙商城 版权所有
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

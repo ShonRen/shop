@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="com.ml.dao.UserDao">
+	 <select id="findByName" parameterType="String"
+	         resultType="com.ml.entity.User">
+	      select *from shop_user
+	       where shop_user_name=#{name}
+	 </select>
+	 <insert id="save" parameterType="com.ml.entity.User">
+	  insert into shop_user(shop_user_id,shop_user_name,shop_user_password,shop_user_email) 
+	  values(#{shop_user_id},#{shop_user_name},#{shop_user_password},#{shop_user_email})
+	</insert>
+</mapper>

@@ -1,0 +1,414 @@
+﻿	body{
+				margin: 0px;
+				padding: 0px;
+			}
+			   
+			#all{
+				height:757px;
+				width: 1144px;
+				border: 1px solid #59A0CC;
+				margin:29px 103px;		  				
+			}
+			#top{
+				height:180px;
+				width: 1144px;
+				background-image: url(../ruanjian.jpg);		
+				position: absolute;		
+			}
+		   #scroll{
+				color: red;
+				font-family: "微软雅黑";
+				font-size: 20px;
+			 }
+		  #title-h{
+		  	font-family: "bookshelf symbol 7";
+		  	font-size: 14px;
+		  	font-weight:bold;
+		  	padding-top:136px;		  
+		  	padding-left:275px;
+		   	text-align: center;
+		   	line-height:22px;
+		  }
+		  /*导航栏*/
+		  #top .nav{
+		  	width: 1000px;
+		  	height: 30px;
+            list-style: none;
+            position:absolute;
+            top: 140px;
+            left: 150px;
+		  } 
+		  #top .nav li{
+		  	/*background: olive;*/
+		  	float: left;
+		  	width: 120px;
+		  	margin-right: 5px;
+            
+		  }
+		  #top .nav li a{
+		  	display: block;
+		  	width: 68px;
+		  	float: left;
+		  	text-decoration: none;
+            color: #EAFCFF;
+            text-align: center;
+
+
+		  }
+		  #top .nav li span{
+		  	display: block;
+		  	float: left;
+		  	width: 3px;
+		  	height: 13px;
+		  	background:#FFFFFF;
+            margin: 1px 0;
+		  }
+          #top .nav li a:hover{
+          	color: #FFE5E9;
+          }
+
+
+		  #main{
+		  	height: 420px;
+		  	width: 1144px;
+		  	background:#fff;
+		    position: absolute;
+		    margin-top: 180px;
+		  }
+		  #main-left{
+		  	height: 250px;
+		  	width:300px;
+		  	position: relative;
+		  }
+		  #main-left-top .as{
+				border: 1px solid #DDDDDD;
+			  
+				margin: 0;
+				padding: 0;
+			}
+			#main-left-top .as li{
+				list-style-type: none;
+				margin-top: 15px;
+			    
+			}
+			#as .show{/*显示*/
+				display: block;
+			}
+			#as .hide{/*/隐藏/*/
+				display:none;
+			}
+		 	
+		 
+			/*学习网站*/
+			#left-footer{
+				height: 104px;
+				width: 279px;
+				margin-top:28px ;
+			}
+			#left-footer legend{
+				color: #4D4E4E;
+				font:"copperplate gothic bold";
+				font-size: 15px;
+			}
+			#left-footer ul{
+				margin-top: 2px;
+				cursor: pointer;
+				padding-left: 20px;
+				
+			}
+			#left-footer ul li{
+				list-style: none;
+				margin-bottom: 3px;
+
+
+			}
+			#left-footer ul span{
+				color: #4D4E4E;
+				font-size: 15px;
+
+			}
+			#left-footer ul li a{
+				color: #fff;
+				text-decoration: none;
+				font-size: 10px;
+                background-color:#61BCF5;
+				border-radius: 3px;
+				box-shadow: 1px 1px 1px #384248;
+				padding: 1px;
+			}
+			#left-footer ul li a:hover{
+				color:#505050;
+			}
+
+
+
+			/*协会活动*/
+			#main-center1{
+				float: left;
+				height: 400px;
+				width:265px;
+				position:absolute;
+				margin-top:-235px;
+				margin-left: 313px;
+			}	
+			#center02 .li-a{
+			
+				height: 27px;
+				width: 265px;
+				
+			}
+			#center02{
+				font-size: 13px;
+				float: left;
+				padding-left: 8PX;
+				line-height: 26px;
+				height: 149px;
+			    width: 150px;
+			}
+			#center02 span {
+			
+				float: right;
+				color:#4D4E4E;
+				font-size: 9px;
+				display: inline;
+				padding-right: 43px;
+			}
+			#center01{
+				font-size: 15px;
+				color: #4D4E4E;
+			}
+			#center01 a{
+				text-decoration: none;
+				font-size: 13px;
+				color: #B1BDBD;
+			}
+			#center01 a:hover{
+				color: Firebrick;
+			}
+			
+			
+			#center02 li a:hover{
+				color: Firebrick;
+			}
+			
+			
+
+			#center1{
+				height: 143px;
+				width: 232px;
+				margin-top: 13px;
+				position: absolute;
+			 
+			}
+
+
+		/*	知识角*/
+			#center11{
+				font-size: 15px;
+				color: #4D4E4E;
+				
+			}
+			#center12{
+				list-style: none;
+				margin-top: 13px;
+				font-size: 13px;
+				position: absolute;	
+				padding-left: 10px;			
+			}
+			#center12 li{
+				margin-bottom: 10px;
+				width: 210px;
+			}
+			.li-a a{
+			    color: #4D4E4E;
+				display: inline;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow:ellipsis;
+				width: 100px;	
+				font-size: 14px;
+				text-decoration: none;			
+			}
+			#center12 li a:hover{
+				color: Firebrick;
+			}
+			#center12 span{
+				display: inline;
+				float: right;
+				margin-top: 5px;
+				font-size: 9px;
+				color: #666;
+			}
+			#main-center2{
+				margin-left: 580px;
+				margin-top: -236px;
+				position: absolute;
+			}
+
+
+		/*	协会比赛*/
+			#center21{
+				height: 194px;
+				width: 517px;
+				float: left;
+			}
+			#center22{
+			color: #4D4E4E;
+			font-size:15px ;
+			}
+			#center23{
+				font-size: 18px;
+				line-height: 18px;
+			}
+			#center23 p{
+				margin-bottom: 8px;
+				font-weight: bold;
+				font-size: 16px;
+				
+			}
+			.sub1{
+				width:146px;
+				height:42px;
+				border:none;
+         		font-size:14px;
+         		background:#1bc4ba;
+         		margin-top: 10px;  
+         		border-radius: 30px 30px 30px 30px;
+			}
+         	.sub2{
+         		 width:146px;
+				height:42px;
+				border:none;
+         		font-size:14px;
+         		background:#1bc4ba;
+         		margin-top: 13px;  
+         		border-radius: 30px 30px 30px 30px;  		
+         	}		
+			#center24 img{
+				height: 150px;
+   				margin-left: 275px;
+    	        margin-top: -154px;
+    	        position: absolute;
+			}
+			
+			#center30{
+				margin-left: 60px;
+				position: absolute;
+			}
+
+
+			/*科技新闻*/
+			#center31{
+				height: 142px;
+				width: 222px;
+				margin-top: 229px;
+				margin-left: -59px;				
+			}
+			#center32{
+				font-size: 15px;
+				color: #4D4E4E;
+			}
+			#center33{
+				font-size: 13px;	
+				position: absolute; 					
+			}
+			#center33 ul{
+				padding-left:17px;
+				margin-top: 3px;
+			}
+			#center33 li{
+				margin-bottom: 10px;
+				width: 210px;
+				height: 23px;
+
+
+			}
+			#center33 li a{
+		        text-decoration: none;
+				color: #4D4E4E;
+				display: block;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow:ellipsis;
+				width: 200px;	
+				font-size: 14px;
+			}
+			#center33 li a:hover{
+				color: Firebrick;
+			}
+			#center33 time{
+				color: #666;
+				font-size: 9px;
+				float: right;
+			}
+
+
+			/*资源分享*/
+			#center40{
+				margin-left: 254px;
+				margin-top:230px;
+				position: absolute;
+			}
+			#center41{
+				width: 263px;
+				height: 140px;
+			}
+			#center42{
+				color: #4D4E4E;
+				font-size: 15px;
+				/*position: absolute;  */
+			}
+			#center43{
+				font-size: 13px;
+				
+			}
+			#center43 li{
+				margin-bottom: 10px;
+				width: 210px;
+				height: 23px;
+			}
+			#center43 li a{
+				text-decoration: none;
+				color: #4D4E4E;
+				display: block;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow:ellipsis;
+				width: 200px;	
+				font-size: 14px;
+			}
+			#center43 li a:hover{
+				color: Firebrick;
+			}
+			#center43 time{
+				color: #666;
+				/*padding-left:40px;*/
+				padding-right: 10px;
+				padding-top: 0px;
+				float: right;
+				font-size: 9px;
+
+			}
+				
+				
+			#footer{
+				background:#59A0CC;
+				font-size: 13px;
+				margin-top:599px;
+				height: 158px;
+				width: 1145px;
+				position:absolute;
+				
+			}								
+			#footer ul{
+				padding-top:26px;		
+				text-align: center;
+				color:#fff;	
+			    line-height: 18px;						
+			}
+			#footer1 img{
+			margin-top: -115px;
+			height: 112px;
+			width: 129px;
+			margin-left: 711px;
+			}

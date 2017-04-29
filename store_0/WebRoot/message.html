@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>详细信息</title>
+		<link rel="stylesheet" href="css/myInfor.css">
+		
+		<script  type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="scripts/cookie_util.js"></script>
+		
+		<script type="text/javascript">
+			$(function(){
+				//alert("1111111111");
+				//$("#msg").click(function(){
+					//alert("124");
+					//1.获取stuid
+					var stuid = getCookie("stuid");
+					//alert(stuid);
+					var flag = true;
+					//判断用户名密码合法性
+					if(stuid == "") {
+						flag = false;
+					}
+					if(flag){
+						$.ajax({
+							url:"http://localhost:8081/ruan_2/student/loadMsg.do",
+							type:"post",
+							dataType:"json",  
+							data:{"stuid":stuid},
+							success:function(result){
+								if(result.status == 1){//stuid对应的人存在
+									//alert(result.msg);
+									var studentMsg = result.data;//学生的json对象数组
+								    //i表示在result中的索引位置，n表示包含的信息的对象  
+								    //alert(result.data.stuname);
+								  var str = '<ul>';
+								  	str+='<li>'+result.data.stuname+'</li>';
+								  	str+='<li>'+result.data.stuschool+'</li>';
+								  	str+='<li>'+result.data.stuengineer+'</li>';
+								  	str+='<li>'+result.data.stuphone+'</li>';
+								  	str+='<li>'+result.data.stuQQ+'</li>';
+								  	str+='<li>'+result.data.deptid+'</li>';
+								  	str+= '</ul>';
+									$("#myInfor1").append(str);
+
+								}else if(result.status == 2){//stuid对应的人不存在
+									alert(result.msg);
+								}
+								$("#myInfor1").click();
+							},
+							error:function() {
+								alert("登陆异常！");
+							}
+							
+						});
+						 return false; 
+					}
+					
+					//});
+				
+			});
+			
+		
+		</script>
+		
+	</head>
+	<body>
+		<div id="all">
+  			
+	  			<!--个人信息-->
+	  			<div id="myInfor">
+	  				<div class="d_top">
+	  					<h1>个人信息</h1>
+	  				</div>
+	  				<div class="div">
+	  					<a id="msg" href="detailMessage.html">详细信息</a>
+	  				</div>
+					<div class="div">
+	  					<a href="modifyPassword.html">修改密码</a>
+	  				</div>
+					<div class="div">
+	  					<a href="main.html">退出登录</a>
+	  				</div>
+	  				<!--
+		  				<div class="d-bottom">
+		  					<img src="myInfor.png">
+		  				</div>
+	  				  -->
+	  			</div>
+			   	
+			   	<!--详细信息-->
+			    <div id="myInfor1">
+			    </div>
+		 </div>
+	</body>
+</html>
+

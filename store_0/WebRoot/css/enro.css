@@ -1,0 +1,18 @@
+/*分别定义HTML中和标记中的距离样式*/
+html,body,h1,form,fieldset,legend,ol,li{margin: 0;padding: 0;}
+/*定义<body>样记样式*/
+body{background:#FFFFFF;font-family:"arial, helvetica, sans-serif" ;padding: 20px;}
+/*定义内容的样式*/
+#BeaList{-webkit-border-radius: 5px;border-radius: 5px;padding:42px;width: 480px;margin-left: 431px;}
+#BeaList fieldset{border: none;margin-bottom: 10px;}
+#BeaList fieldset:last-of-type{margin-bottom: 0;}
+#BeaList legend{color:#616161;font-size: 16px;font-weight: bold;padding-bottom: 10px;text-shadow: 0 1px 1px #008000;}
+#BeaList>fieldset>legend:before{content: "step" counter(fieldsets);counter-increment: fieldsets;}
+#BeaList fieldset fieldset legend{color: red;font-size: 13px;font-weight: normal;padding-bottom: 0;}
+#BeaList ol li{background: #228B22;background: rgba(255,255,255,0.3);border-color: #B04D35;border-color: rgba(255,255,255,0.6);
+				border-style: solid;border-width: 2px;-webkit-border-radius: 5px;
+				line-height: 30px;list-style: none;padding: 5px 10px;margin-bottom: 2px;cursor: pointer;}
+#BeaList ol ol li{background: none;border:none;float: left;}
+#BeaList label{float: left;font-size: 14px;width: 110px;}
+#BeaList fieldset fieldset lable{background: none no-repeat left 50%;line-height: 20px;padding: 0 0 0 30px;width: auto;}
+		/*这样看起来应该不方便  其他的我就先不这样弄了*/
