@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="com.ml.dao.ProductDao">
+	 <select id="findByProductList" parameterType="String"
+	         resultType="com.ml.entity.Product">
+	      select * from shop_product where shop_product_list like CONCAT(CONCAT('%',#{productList}),'%');
+	 </select>
+	 
+	 <select id="findByList" parameterType="String"
+	         resultType="com.ml.entity.Product">
+	     SELECT shop_image_address,shop_product_name,
+	     		shop_product_price,shop_product_count,shop_product_id 
+	     		FROM shop_product 
+	     		WHERE shop_product_list=#{list}
+	 </select>
+</mapper>
+
+
