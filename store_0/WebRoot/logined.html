@@ -12,60 +12,62 @@
 		<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
 		<!--导入bootstrap.js-->
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="js/basevalue.js"></script>
-		<script type="text/javascript" src="js/quit.js"></script>
 		<script type="text/javascript" src="js/cookie_util.js"></script>
-		<script type="text/javascript" src="js/product.js"></script>
 		<script>
+		
 			$(function() {
-				//图片轮播
 				$('.carousel').carousel({
 					interval: 3000
 				});
+			})
+			
+			//点击图片 查看详情
+			$(function(){
+				 $(".col-xs-12 p").on("click","a",function(){
+					 alert("已选中");
+					 window.location.href="product_info.htm";
+				  });
+			})
+		</script>
+		
+		
+		
+		
+		
+		<script type="text/javascript">
+				$(function(){
 				
-				//获得cookie
+				
+				//判断cookie，如果没有，强制跳转到登陆
 				var userId = getCookie("userId");
-				
-				//判断cookie，若不存在，则登陆
-				if(userId == null) {
+				if(userId==null) {
 					window.location.href="login.html";
 				}
-						
-						
-				//退出功能
-				$("#quituser").click(quit);
-
-				//点击类别 进行跳转
-			   $(".dropdown-menu li").on("click","a",showProductList);
+				//alert(userId);
 				
+				$("#quituser").click(function(){
+					//alert(userId);
+					delCookie("userId");
+				});
 				
-				//点击搜索，进行查询
-				 $("#searchP").click(searchProductList);
-				
-				
-			})
-		</script>	
-	
+			});
+		</script>
 	</head>
 
 	<body>
-	  
-	  
-		<div class="container all" >
+		<div class="container">
 			<!--放log-->
 			<div class="container">
 				<div class="row">
 					<div class="col-md-4 col-sm-6 col-xs-12"><img src="img/logo2.gif" /></div>
 					<div class="col-md-4 col-sm-6 col-xs-12"><img src="img/header.jpg" /></div>
 					<div style="margin-top: 20px;padding-left:240px" class="col-md-4 col-sm-6 col-xs-12">
-						<span id="welcome" style="display:none"></span>
-						<span id="quituser"><a href="index.html"> <退出> </a></span>
-						<span ><a href="cart.html"> <购物车> </a></span>
+
+						<span><a id="quituser" href="index.html">退出</a></span>
+						<span><a href="cart.html">购物车</a></span>
 					</div>
 				</div>
 			</div>
-			
-			
 			<!--放导航条-->
 			<div class="container">
 				<div class="row">
@@ -79,20 +81,20 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						  </button>
-								<a class="navbar-brand" href="logined.html">首页</a>
+								<a class="navbar-brand" href="#">首页</a>
 							</div>
 
 							<!-- Collect the nav links, forms, and other content for toggling -->
 							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-								<ul class="nav navbar-nav" >
-									<li class="dropdown" >
+								<ul class="nav navbar-nav">
+									<li class="dropdown">
 										<a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">家用电器<span class="caret"></span></a>
-										<ul class="dropdown-menu" id="nav_menu">
+										<ul class="dropdown-menu">
 											<li>
-												<a href="javascript:;">calorifier</a>
+												<a href="product_list.html">热水器</a>
 											</li>
 											<li>
-												<a href="javascript:;">washer</a>
+												<a href="product_list.html">洗衣机</a>
 											</li>
 										</ul>
 										</li>
@@ -100,13 +102,13 @@
 											<a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">电子产品<span class="caret"></span></a>
 											<ul class="dropdown-menu">
 												<li>
-													<a href="javascript:;">mobilephone</a>
+													<a href="product_list.html">手机</a>
 												</li>
 												<li>
-													<a href="javascript:;">television</a>
+													<a href="product_list.html">电视</a>
 												</li>
 												<li>
-													<a href="javascript:;">computer</a>
+													<a href="product_list.html">电脑</a>
 												</li>
 											</ul>
 										</li>
@@ -114,24 +116,24 @@
 											<a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">服装<span class="caret"></span></a>
 											<ul class="dropdown-menu">
 												<li>
-													<a href="javascript:;">jacket</a>
+													<a href="product_list.html">上衣</a>
 												</li>
 												<li>
-													<a href="javascript:;">pants</a>
+													<a href="product_list.html">裤子</a>
 												</li>
 												<li>
-													<a href="javascript:;">shoes</a>
+													<a href="product_list.html">鞋</a>
 												</li>
 											</ul>
 										</li>
 										<li class="dropdown">
 											<a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">日常用品<span class="caret"></span></a>
-											<ul class="dropdown-menu">
+											<ul class="d																																																																																																																																																																																																																																																																																																																																																																																																																																																										ropdown-menu">
 												<li>
-													<a href="javascript:;">cup</a>
+													<a href="product_list.html">水杯</a>
 												</li>
 												<li>
-													<a href="javascript:;"> toothpaste</a>
+													<a href="product_list.html">牙膏</a>
 												</li>
 											</ul>
 								</ul>
@@ -139,7 +141,7 @@
 									<div class="form-group">
 										<input type="text" class="form-control" placeholder="请输入搜索内容">
 									</div>
-									<input type="button" id = "searchP" class="btn btn-default" value="搜索"/>
+									<button type="submit" class="btn btn-default">搜索</button>
 								</form>
 							</div>
 							<!-- /.navbar-collapse -->
@@ -209,7 +211,7 @@
 								<p>&yen;300</p>
 							</div>
 							<div align="center" class="col-md-2 col-sm-4 col-xs-12" style="margin-top: 50px" height="200px">
-								<img src="img/small02.jpg" style="display: inline-block;" />
+								<img src="img/small02.jpg"display: inline-block;" />
 								<p>
 									<a href="javascript:;">三星电视</a>
 								</p>
@@ -361,80 +363,6 @@
 					<img src="products/ad_.gif" width="100%" />
 				</div>
 			</div>
-			
-			</div>
-		
-		
-		
-			<!-- 商品页  要隐藏 -->
-			<div class="all2" style='display:none'>
-		    
-	
-      	<div class="container">
-			<div class="row">
-				<div class="col-md-4 col-sm-6 col-xs-12"><img src="img/logo2.gif" /></div>
-				<div class="col-md-4 col-sm-6 col-xs-12"><img src="img/header.jpg" /></div>
-				<div style="margin-top: 20px;padding-left:240px" class="col-md-4 col-sm-6 col-xs-12">
-					<span><a href="cart.html" style="font-size: 20px;color:red">购物车</a></span>
-				</div>
-			</div>
-
-		<div class="container">
-			<div class="row">
-				<nav class="navbar navbar-inverse">
-					<div class="container-fluid">
-						<!-- Brand and toggle get grouped for better mobile display -->
-						<div class="navbar-header">
-							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						  </button>
-							<a class="navbar-brand" href="index.html">首页</a>
-						</div>
-
-					
-			
-						<!-- /.navbar-collapse -->
-					</div>
-					<!-- /.container-fluid -->
-				</nav>
-			</div>
-		</div>
-		<div class="row" style="width:1210px;margin:0 auto;">
-			<div class="col-md-12">
-				<ol class="breadcrumb">
-					<li>
-						<a href="logined.html"><strong>首页</strong></a>/商品列表
-					</li>
-				</ol>
-			</div>
-			
-       <!--拼接的图片  -->
-			<div id="image_all">
-				 
-			</div>
-
-		
-
-		</div>
-		<div class="container">
-			<div style="width:1210px ;">
-				<h4 style=" margin-left:500px; margin-top:20px;font: 14px/30px " 微软雅黑 ";">
-					<a href="#">展示更多商品</a>
-				</h4>
-			</div>
-		</div>
-	
-	
-	</div>
-		    
-		    
-		    
-		  
-	     	</div>
-		
 			<!--结尾-->
 			<div class="container">
 				<div style="margin-top: 50px;" class="row">
@@ -486,10 +414,6 @@
 				</div>
 			</div>
 		</div>
-	
-
-		
-		
 	</body>
 
 </html>
